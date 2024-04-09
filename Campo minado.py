@@ -4,7 +4,7 @@ import random
 def gerar_board(linhas, colunas, bombas):
   board = [['0' for _ in range(colunas)] for _ in range(linhas)]
 
-  # Coloca as bombas aleatoriamente
+  
   bombas_colocadas = 0
   while bombas_colocadas < bombas:
     linha = random.randint(0, linhas - 1)
@@ -14,7 +14,7 @@ def gerar_board(linhas, colunas, bombas):
       board[linha][coluna] = '*'
       bombas_colocadas += 1
 
-      # Atualiza as casas vizinhas com a quantidade de bombas ao redor
+      
       for i in range(linha - 1, linha + 2):
         for j in range(coluna - 1, coluna + 2):
           if 0 <= i < linhas and 0 <= j < colunas and board[i][j] != '*':
