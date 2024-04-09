@@ -42,7 +42,7 @@ def jogar():
     coluna = int(input("Digite a coluna que deseja apresentar: "))
 
     if board[linha][coluna] == '*':
-      print("Game over")
+      print("Game over,tente novamente")
       exibir_board(board)
       break
     else:
